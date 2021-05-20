@@ -19,6 +19,9 @@
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
         <a-entity id"dron" gltf-model="./assets/dron/scene.gltf" scale="0.1 0.1 0.1" position="0 0 -15" animation-mixer/>
-        <a-camera gps-camera rotation-reader></a-camera>
+	    <a-camera ar-raycaster raycaster cursor="fuse:false"> </a-camera>
+	    <a-ring id="cursor" radius-inner="0.1" radius-outer="0.2"  
+        color="teal" position="0 -0.8 -5" rotation="-90 0 0">
+</a-ring>
 	</a-scene>
 </body>
